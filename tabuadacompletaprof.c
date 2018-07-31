@@ -10,30 +10,31 @@ void tabuada(int n, int i)
 		return;
 	}
 	else
-	{	
-		
+	{			
 		printf("%d x %d = %d\n", n, i, n*i);
+
 		tabuada (n, i + 1);
 	}
 }
 
-void tabuadacompleta(int i)
+void tabuadacompleta(int c)
 {
-	if (i == 10)
+	if (c == 10)
 	{
 		return;
 	}
 	else
 	{	
-		tabuada (i, 1);
-		tabuadacompleta(i+1);
+		tabuada (c, 1);
+		printf("-------------------------\n");
+		tabuadacompleta(c+1);
 	}
 }
 
 int main()
 {
 	
-	tabuadacompleta(8);
+	tabuadacompleta(1);
 
 	return 0;
 }
