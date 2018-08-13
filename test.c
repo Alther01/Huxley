@@ -1,35 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void somadora(int caixas, int tamanho, int contador)
+void somadora(int caixas, int tamanho, int contador, int pacotes)
 {
+    int aux = 1;
+    
 	if(tamanho == 'p' || tamanho == 'P')
-		xicaras += 10;
+	{
+		pacotes += 10;
+		
+		aux == caixas * 10;
+		printf("%d\n", aux);
+	}
 	else
-		xicaras += 16;
+		pacotes +=16;
 
-	cafe(xicaras, contador);
+	cafe(pacotes, contador);
 }
 
-int cafe (int xicaras, int contador)
+int cafe (int pacotes, int contador)
 {
 	int caixas;
 	char tamanho;
 
 	if(contador == 7)
 	{
-		printf("%d\n", xicaras);
-		return xicaras;
+		printf("%d\n", pacotes);
+		return pacotes;
 	}
 
 	scanf("%d %s", &caixas, &tamanho);
 
-	somadora(caixas, tamanho, contador + 1);
+	somadora(caixas, tamanho, contador + 1, pacotes);
 }
 
 int main()
 {
 	printf("%d\n", cafe(0,0)/7);
 
-	retun 0;
+	return 0;
 }
