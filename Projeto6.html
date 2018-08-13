@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Projeto 6 de internet e WEB</title>
+  <script>
+  function alegre() {
+    if (document.forms[0].triste.checked){
+      alert("Obrigado, ainda teremos boas surpresas")
+    }else {
+            alert("O professor Paragua agradece o teu feedback.")
+    }
+  }
+  </script>
+</head>
+<body>
+  <form name="theBlues">
+    <input type="checkbox"
+    name="triste">Colocar um x, se vc estiver feliz no curso de internet e WEB do IC/UFAL.
+  </form>
+  <hr>
+  <form name="visit">
+    <input type="button" value="Avaliando feedback..." onclick="alegre()">
+  </form>
+</body>
+</html>

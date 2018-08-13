@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>A Banda de Chico Buarque</title>
+</head>
+<script>
+function processData(){
+  alert("Foi a banda e escreveste "+document.forms[0].chanson.value)
+}
+</script>
+<body>
+  <form name="Banda">
+Indique a primeira música de sucesso de Chico Buarque :<br>
+<input type="text" name="chanson"><p>
+<input type="button" name="traitement"
+  VALUE="Tratar a solicitacao..."
+  onclick="processData()">
+</form>
+</body>
+</html>

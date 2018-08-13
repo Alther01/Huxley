@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Area do triangulo</title>
+<script language="javascript">
+function areadotriangulo(){
+  base=prompt("entre com a base:","")
+  lado1=prompt("entre com o lado1:","")
+  lado2=prompt("entre com o lado2:","")
+  perimetro=parseInt(base)+parseInt(lado1)+parseInt(lado2)
+  alert("O perimetro do triangulo: "+perimetro)
+  altura=prompt("entre com a altura do triangulo para calcularmos a área","")
+  area=(parseInt(base)*parseInt(altura))/2
+    //soma=parseInt()+parseInt(entrada2)
+  //media=soma/2
+  alert("A area do triangulo base * altura/2 eh "+area)
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" name="FABIO" value="clique para a area"
+onclick="areadotriangulo()">
+</form>
+</body>
+</html>
