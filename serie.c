@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
 
 int primo(int x, int i)
@@ -18,9 +18,14 @@ int primo(int x, int i)
     primo (x, i+1);
 }
 
-int pprimo(n_primo)
+int pprimo(int n_primo)
 {
-    if()
+    int verificador = primo(n_primo, 2);
+    
+    if(verificador == 1)
+        return n_primo;
+    else
+        n_primo++;
 }
 
 int fatorial(int n)
@@ -32,7 +37,7 @@ int fatorial(int n)
   }
   else
   {
-      return n * fatorial(n-1);
+    return n * fatorial(n-1);
   }
   
   return 0;
@@ -43,20 +48,22 @@ int serie(int n_primo, int n_fatorial, int c, double soma)
 
     if(c == 1)
     {
-        printf(" %d!/%d\n",n_fatorial,n_primo);
+        printf(" %d!/%d\n",n_fatorial, n_primo);
 
-        soma = fatorial(n_fatorial)/primo(n_primo, 2);
+        soma = fatorial(n_fatorial)/pprimo(n_primo);
 
         return printf("%.2lf\n", soma+1);
     }
     if(n_fatorial == 1)
         printf("1!/1 +");
     else
-        printf(" %d!/%d +",n_fatorial,n_primo);
+        printf(" %d!/%d +",n_fatorial, n_primo);
 
-    soma = fatorial(n_fatorial)/primo(n_primo, 2);
+    soma = fatorial(n_fatorial)/pprimo(n_primo);
+    
+    printf("%d\n", n_primo);
 
-    serie (n_primo + 1, n_fatorial + 1, c -1, soma);
+    serie(n_primo, n_fatorial + 1, c -1, soma);
 }
 int main()
 {
@@ -70,4 +77,3 @@ int main()
 
     return 0;
 }
-
