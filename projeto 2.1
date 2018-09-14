@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!--Construir um botão que verifique a equacao do segundo grau tem ou não raízes reais-->
+<!--Entra com coeficiente a, b, c; Calcula Delta; Caso delta seja maior que zero, informe que a equação tem raizes reais-->
+<!--Em caso contrário, mensagem informando a ausência de raízes reias -->
+<!--JAVA ler coeficientes a, b, c; Se delta > 0 mostre que ("há raízes reais"); Se não mostre ("Site não autorizado")-->
+	<title>GRUPO 1</title>
+	<script languague='JavaScript'>
+	function delta(){
+		var a = prompt("Por favor digite o coeficiente a:", " ");
+		var b = prompt("Por favor digite o coeficiente b:", " ");
+		var c = prompt("Por favor digite o coeficiente c:", " ");
+		var valor_delta = (b*b) - (4*a*c);
+		if(valor_delta > 0){
+			alet("A equação tem duas raizes reais");
+		}
+		else if(valor_delta == 0){
+			alert("A equação tem uma raiz real");
+		}
+		else{
+			alert("A equação sem raízes reias");
+		}
+		}
+	</script>
+</head>
+<body>
+Projeto 1, envolvendo condicional simples e composto.<br>
+<p></p>
+Realizado para obtenção de nota, pelos discentes Alther Lago e André<br>
+<p></p>
+<form>
+<input type="button" name="raizes" value="Cliqueaqui para calcular as raizes" onClick="delta()">
+</form>
+</body>
+</html>
