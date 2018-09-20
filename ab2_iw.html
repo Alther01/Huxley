@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> Projeto 4 </title>
+	</head>
+
+	<body>
+		<h2> Internet e Web 2018.1 </h2>
+		<h3> Professor: Fábio Paraguaçu </h3>
+		<h3> Cálculo da média </h3>
+		<h3> Trabalho realizado por Alther e André</h3>
+
+	<script>
+		function mediaf(){
+			var media
+			nome = prompt("Digite seu nome:","")
+			matricula = prompt("Digite seu número de matrícula:","")
+			periodo = prompt("Informe seu período atual:","")
+			glossario1 = prompt("Digite a nota do Glossário 1:","")
+			media1 = prompt("Digite a Média 1:","")
+			glossario2 = prompt("Digite a nota do Glossário 2:","")
+			media2 = prompt("Digite a Média 2:","")
+			media3 = prompt("Digite a Média 3:","")
+			media4 = prompt("Digite a Média 4:","")
+			proj_final = prompt("Digite a nota do Projeto Final:","")
+
+			semana1 = (glossario1 * 0.2) + (media1 * 0.8)
+			semana2 = (glossario2 * 0.2) + (media2 * 0.8)
+			semana3 = media3
+			semana4 = media4
+
+			nota1 = (semana1 + semana2 + semana3 + semana4)/4
+			nota2 = proj_final
+			media = (nota1 + nota2)/2
+				if(media >= 7){
+					alert("Nome: " +nome + "\nMatrícula: " +matricula + "\nPeríodo: " +periodo + "\nStatus: Parabéns! você foi aprovado!" )
+				}
+				else if ((media >= 5) && (media < 7)){
+					alert("Nome: " +nome + "\nMatrícula: " +matricula + "\nPeríodo: " +periodo + "\nStatus: Você precisará de reavaliação." )
+				}
+				else(media < 5){
+					alert("\nNome: " +nome + "\nMatrícula: " +matricula + "\nPeríodo: " +periodo + "\nStatus: Que pena, você não foi aprovado." )
+				}
+}
+	</script>
+
+	<form>
+		<input type="button" value='Clique aqui!' onclick="mediaf()">
+	</form>
+	</body>
+
+</html>
