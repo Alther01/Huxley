@@ -51,3 +51,81 @@
 	</body>
 
 </html>
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>triangulo</title>
+<script language="JavaScript">
+
+function calcular()
+{
+var lado1=prompt("digite valor de lado1::","")
+var lado2=prompt("digite valor de lado2::","")
+var lado3=prompt("digite valor de lado3::","")
+var soma = lado2+lado3
+       	 if(lado1>=soma)
+        {
+        alert("Triângulo não pode ser formado"+soma);
+        }
+        if((lado1*lado1)>(lado2*lado2)+(lado3*lado3))
+        {
+        alert("Triângulo é Obtusângulo");
+        }
+        else if ((lado1*lado1)==(lado2*lado2)+(lado3*lado3))
+       {
+       alert("Triângulo é retângulo");
+       }
+        else if((lado1*lado1)<(lado2*lado2)+(lado3*lado3))
+        {
+        alert("Triângulo é Acutângulo");
+        }
+
+
+}<!--achei o erro, vc não tnha fexhado a função... Mas agora não está abrindo o botão , vamos verificar-->
+		</script>
+  </head>
+
+  <body>
+    <h1>Triângulo</h1>
+    <form>
+     <INPUT TYPE="button" VALUE="digite os lados do triangulo" onClick="calcular()">
+    </form>
+
+  </body>
+</html>
+	
+	
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8"/>
+<title>Projeto3</title>
+<script language="javascript">
+function restaurante(){
+  var peso=prompt("Por favor digite a quantidade em gramas do self-service:","")
+  var suco=prompt("Por favor digite a quantidade de copos de sucos consumidos:","")
+  var sobremesa=prompt("Por favor digite a quantidade de sobremesa ingerida:","")
+
+  var cpeso=parseInt(peso)*0.014
+  var csuco=parseInt(suco)*3
+  var csobremesa=parseInt(sobremesa)*2
+  alert(""+peso +"gramas no self-service R$ "+cpeso+"\n"+suco+" sucos R$ "+csuco+"\n"+sobremesa+" pratos de sobremesa R$ "+csobremesa+" o prato")
+  var total=cpese+csuco+csobremesa;
+  alert("O valor total é:"+total);
+}
+</script>
+</head>
+<body>
+<p>Olá!!!<br>Seja bem vindo ao caixa do restaurante do Grego</p>
+<form>
+<input
+<input type="button" name="FABIO" value="Cálculo da sua conta"
+onclick="restaurante()">
+</form>
+</body>
+</html>
+
