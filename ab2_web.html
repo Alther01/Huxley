@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> Projeto 4 </title>
+	</head>
+
+	<body>
+		<h2> Internet e Web 2018.1 </h2>
+		<h3> Professor: Fábio Paraguaçu </h3>
+		<h3> Cálculo da média </h3>
+		<h3> Trabalho realizado por Alther e André</h3>
+
+	<script>
+		function mediaf(){
+			var media
+			nome = prompt("Digite seu nome:","")
+			matricula = prompt("Digite seu número de matrícula:","")
+			periodo = prompt("Informe seu período atual:","")
+			glossario1 = prompt("Digite a nota do Glossário 1:","")
+			media1 = prompt("Digite a Média 1:","")
+			glossario2 = prompt("Digite a nota do Glossário 2:","")
+			media2 = prompt("Digite a Média 2:","")
+			media3 = prompt("Digite a Média 3:","")
+			media4 = prompt("Digite a Média 4:","")
+			proj_final = prompt("Digite a nota do Projeto Final:","")
+
+			semana1 = (glossario1 * 0.2) + (media1 * 0.8)
+			semana2 = (glossario2 * 0.2) + (media2 * 0.8)
+			semana3 = media3
+			semana4 = media4
+
+			nota1 = (semana1 + semana2 + semana3 + semana4)/4
+			nota2 = proj_final
+			media = (nota1 + nota2)/2
+				if(media >= 7){
+					alert("Nome: " +nome + "\nMatrícula: " +matricula + "\nPeríodo: " +periodo + "\nStatus: Parabéns! você foi aprovado!" )
+				}
+				else if ((media >= 5) && (media < 7)){
+					alert("Nome: " +nome + "\nMatrícula: " +matricula + "\nPeríodo: " +periodo + "\nStatus: Você precisará de reavaliação." )
+				}
+				else(media < 5){
+					alert("\nNome: " +nome + "\nMatrícula: " +matricula + "\nPeríodo: " +periodo + "\nStatus: Que pena, você não foi aprovado." )
+				}
+
+				<!--Falta a final aqui-->
+}
+	</script>
+
+	<form>
+		<input type="button" value='Clique aqui!' onclick="mediaf()">
+	</form>
+	</body>
+
+</html>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Projeto 2</title>
+<script language="JavaScript">
+
+function calcular(){
+    var lado1=prompt("digite valor de lado1::","");
+    var lado2=prompt("digite valor de lado2::","");
+    var lado3=prompt("digite valor de lado3::","");
+    var soma = parseInt(lado2) + parseInt(lado3);
+
+
+        if( lado1 >= soma ){
+            alert("Triângulo não pode ser formado");
+        }
+
+        else if( (lado1*lado1)>(lado2*lado2)+(lado3*lado3) ){
+            alert("Triângulo é Obtusângulo");
+        }
+
+        else if ( (lado1*lado1) == (lado2*lado2)+(lado3*lado3) ){
+            alert("Triângulo é retângulo");
+        }
+
+        else if( (lado1*lado1) < (lado2*lado2) + (lado3*lado3) ){
+            alert("Triângulo é Acutângulo");
+        }
+
+
+}<!--achei o erro, vc não tnha fexhado a função... Mas agora não está abrindo o botão , vamos verificar-->
+		</script>
+  </head>
+
+  <body>
+    <h1>Triângulo</h1>
+    <form>
+     <INPUT TYPE="button" VALUE="Por favor, digite os lados do triângulo" onClick="calcular()">
+    </form>
+
+  </body>
+</html>
+
+
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8"/>
+<title>Projeto3</title>
+<script language="javascript">
+    function restaurante(){
+        var peso=prompt("Por favor digite a quantidade em gramas do self-service:","");
+        var suco=prompt("Por favor digite a quantidade de copos de sucos consumidos:","");
+        var sobremesa=prompt("Por favor digite a quantidade de sobremesa ingerida:","");
+        var idade=prompt("Por favor digite a sua idade:","");
+        var cpeso=parseFloat(peso)*14e-3;
+        var formatedNumber = cpeso.toFixed(2);
+        var csuco=parseInt(suco)*3;
+        var csobremesa=parseInt(sobremesa)*2;
+        var total=cpeso+csuco+csobremesa;
+
+
+        if( (idade >= 40) && (idade <= 50) ){
+            total = total * 0.95;
+            var formated_total = total.toFixed(2);
+            alert(+peso+" gramas no self-service: R$ "+formatedNumber+"\n"+suco+" suco(s) R$ "+csuco+"\n"+sobremesa+" prato(s) de sobremesa(s) R$ "+csobremesa+"\n Valor total = R$ "+formated_total);
+        }
+
+        else if( (idade >= 50) && (idade <= 60) ){
+            total = total * 0.90;
+            formated_total = total.toFixed(2);
+            alert(+peso+" gramas no self-service: R$ "+formatedNumber+"\n"+suco+" suco(s) R$ "+csuco+"\n"+sobremesa+" prato(s) de sobremesa(s) R$ "+csobremesa+"\n Valor total = R$ "+formated_total);
+        }
+
+        else if(idade > 60){
+            total = total * 0.85;
+            formated_total = total.toFixed(2);
+            alert(+peso+" gramas no self-service: R$ "+formatedNumber+"\n"+suco+" suco(s) R$ "+csuco+"\n"+sobremesa+" prato(s) de sobremesa(s) R$ "+csobremesa+"\n Valor total = R$ "+formated_total);
+        }
+
+        else{
+            alert(+peso+" gramas no self-service: R$ "+formatedNumber+"\n"+suco+" suco(s) R$ "+csuco+"\n"+sobremesa+" prato(s) de sobremesa(s) R$ "+csobremesa+"\n Valor total = R$ "+total);
+        }
+}
+</script>
+</head>
+<body>
+    <p>Olá!!!<br>Seja bem vindo ao caixa do restaurante do Grego</p>
+    <form>
+    <input
+    <input type="button" name="pagamento" value="Cálculo da sua conta"
+    onclick="restaurante()">
+</form>
+</body>
+</html>
