@@ -14,36 +14,45 @@
 	<script>
 		function mediaf(){
 			var media
-			nome = prompt("Digite seu nome:","")
-			matricula = prompt("Digite seu número de matrícula:","")
-			periodo = prompt("Informe seu período atual:","")
-			glossario1 = prompt("Digite a nota do Glossário 1:","")
-			media1 = prompt("Digite a Média 1:","")
-			glossario2 = prompt("Digite a nota do Glossário 2:","")
-			media2 = prompt("Digite a Média 2:","")
-			media3 = prompt("Digite a Média 3:","")
-			media4 = prompt("Digite a Média 4:","")
-			proj_final = prompt("Digite a nota do Projeto Final:","")
+			var nome = prompt("Digite seu nome:","")
+			var matricula = prompt("Digite seu número de matrícula:","")
+			var periodo = prompt("Informe seu período atual:","")
+			var glossario1 = prompt("Digite a nota do Glossário 1:","")
+			var media1 = prompt("Digite a Média 1:","")
+			var glossario2 = prompt("Digite a nota do Glossário 2:","")
+			var media2 = prompt("Digite a Média 2:","")
+			var media3 = prompt("Digite a Média 3:","")
+			var media4 = prompt("Digite a Média 4:","")
+			var proj_final = prompt("Digite a nota do Projeto Final:","")
+			var semana1 = (glossario1 * 0.2) + (media1 * 0.8)
+			var semana2 = (glossario2 * 0.2) + (media2 * 0.8)
+			var semana3 = media3
+			var semana4 = media4
+      alert("media cheguei")
+			var nota1 = (parseInt(semana1)+parseInt(semana2)+parseInt(semana3)+parseInt(semana4))/4
+			var nota2 = proj_final
+			var media = (parseInt(nota1)+parseInt(nota2))/2
 
-			semana1 = (glossario1 * 0.2) + (media1 * 0.8)
-			semana2 = (glossario2 * 0.2) + (media2 * 0.8)
-			semana3 = media3
-			semana4 = media4
+      alert("media "+media)
 
-			nota1 = (semana1 + semana2 + semana3 + semana4)/4
-			nota2 = proj_final
-			media = (nota1 + nota2)/2
-				if(media >= 7){
+      if(media >= 7)
+      {
 					alert("Nome: " +nome + "\nMatrícula: " +matricula + "\nPeríodo: " +periodo + "\nStatus: Parabéns! você foi aprovado!" )
-				}
-				else if ((media >= 5) && (media < 7)){
-					alert("Nome: " +nome + "\nMatrícula: " +matricula + "\nPeríodo: " +periodo + "\nStatus: Você precisará de reavaliação." )
-				}
-				else(media < 5){
-					alert("\nNome: " +nome + "\nMatrícula: " +matricula + "\nPeríodo: " +periodo + "\nStatus: Que pena, você não foi aprovado." )
-				}
+			}
 
-				<!--Falta a final aqui-->
+
+			else if ((media >= 5) && (media < 7))
+      {
+          var nota_final = (media * 0.6) + ()
+					alert("Nome: " +nome + "\nMatrícula: " +matricula + "\nPeríodo: " +periodo + "\nStatus: Você precisará de reavaliação." )
+          
+			}
+
+
+      else(media < 5)
+      {
+					alert("\nNome: " +nome + "\nMatrícula: " +matricula + "\nPeríodo: " +periodo + "\nStatus: Que pena, você não foi aprovado." )
+			}
 }
 	</script>
 
